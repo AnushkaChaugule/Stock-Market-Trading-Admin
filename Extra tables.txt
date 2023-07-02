@@ -1,0 +1,26 @@
+transactionHEad
+
+tran_type	char(2)	Checked           dropdown (bp,br,cp,cr)
+doc_no	int	Checked                    max on tran_type+company_code+yearC            
+doc_date	datetime	Checked
+cashbank	int	Checked
+total	decimal(18, 2)	Checked
+odeint	Checked
+yearCode	int	Checked
+companyCode     int     Checked
+cb	int	Checked  (FK of acco_id of accountMaster)
+createdBy	int	Checked
+modifiedBy	int	Checked
+id                 autoincrement	PK	
+
+transactionDetails
+tranid          int     id from transactionHEad
+id              int     autoincrement    PK 
+details_id	int	Checked   (1,2,3,....)
+debit_ac	int	Checked
+credit_ac	int	Checked
+amount	decimal(18, 2)	Checked
+narration	varchar(500)	Checked
+drcr	char(1)	Checked
+da      int     (fk of account_id of accountMaster)
+ca      int     (fk of account_id of accountMaster)
